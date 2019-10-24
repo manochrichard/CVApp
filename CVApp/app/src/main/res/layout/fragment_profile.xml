@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/container_personal_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_profilepic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icons_userprofile_96"></ImageView>
+
+                <TextView
+                    android:id="@+id/txt_profileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Name"
+                    android:textSize="25sp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_profileTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Job Title"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_profileLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Location"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_profileEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="email"
+                    android:textSize="14sp"></TextView>
+
+
+                <TextView
+                    android:id="@+id/txt_profileContactNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Mobile Number"
+                    android:textSize="14sp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/header_summary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="SUMMARY"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_profile_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:id="@+id/txt_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:text="Summary"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/header_skills"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="SKILLS"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_skill_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:id="@+id/txt_skills"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Skill Set"></TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/header_work_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="EXPERIENCE"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_company_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite">
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_companyLogo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/icons_user_profile_48"></ImageView>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_comapnyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Company Name"
+                        android:textSize="20sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/txt_JobTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Title"></TextView>
+
+                    <TextView
+                        android:id="@+id/txt_workDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Duration"></TextView>
+
+                    <TextView
+                        android:id="@+id/txt_Responsibilities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Responsebeleties"></TextView>
+
+                    <TextView
+                        android:id="@+id/txt_Achievements"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Achievements"></TextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="70dp"></View>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

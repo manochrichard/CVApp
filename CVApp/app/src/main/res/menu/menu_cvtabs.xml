@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/icons_user_profile_24"
+        android:title="@string/profile" />
+
+    <item
+        android:id="@+id/navigation_profileExtra"
+        android:icon="@drawable/icons_profile_extra_24"
+        android:title="@string/extra" />
+
+    <item
+        android:id="@+id/navigation_socialLinks"
+        android:icon="@drawable/icons_social_links_24"
+        android:title="@string/social" />
+
+
+</menu>
