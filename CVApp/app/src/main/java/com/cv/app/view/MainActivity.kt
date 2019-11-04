@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_profileExtra -> {
-                    toolbar!!.title = "Profile Extra"
+                    toolbar!!.title = "Published App"
                     val fragment = ProfileExtraFragment()
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.frame_container, fragment, fragment.javaClass.getSimpleName())

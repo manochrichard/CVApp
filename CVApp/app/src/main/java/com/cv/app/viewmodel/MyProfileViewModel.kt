@@ -8,44 +8,53 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.cv.app.model.User
 import com.cv.app.repository.NetworkRequest
 
-class MyProfileViewModel : ViewModel {
+import org.json.JSONObject
 
-    constructor() : super()
+class MyProfileViewModel() : ViewModel() {
+    var mutableLiveData = MutableLiveData<List<User>>()
+    var errorLiveData = MutableLiveData<Throwable>()
 
-    var mutableLiveData = MutableLiveData<ArrayList<User>>()
-    var arrayList = ArrayList<User>()
-
-    fun getProfileData(): MutableLiveData<ArrayList<User>> {
+    fun getProfileData() {
         fetchServerData()
-        return mutableLiveData;
+
     }
 
     fun fetchServerData() {
         val jsonObjectRequest =
             JsonObjectRequest(Request.Method.GET, BASE_URL, null, Response.Listener { response ->
                 if (response != null) {
-                    val user = User(
-                        response.optString("ename"),
-                        response.optString("emobno"),
-                        response.optString("email"),
-                        response.optString("location"),
-                        response.optString("ctitle"),
-                        response.optString("profile_summary"),
-                        response.optString("profile_skills"),
-                        response.optString("cname"),
-                        response.optString("cduration"),
-                        response.optString("cresponsibilities"),
-                        response.optString("cachievements"),
-                        response.optString("clogo")
-                    )
-                    arrayList.add(user)
-                    mutableLiveData.value = arrayList
+                    val list = addProfileDataToMutableList(response)
+                    mutableLiveData.postValue(list)
                 }
+
             }, Response.ErrorListener {
-                val e = it.toString()
+                errorLiveData.postValue(it)
+
 
             })
         NetworkRequest.instance?.addToRequestQueue(jsonObjectRequest, REQUEST_TAG)
+
+    }
+
+    fun addProfileDataToMutableList(response: JSONObject): List<User> {
+
+        return listOf(
+            User(
+                response.optString("ename"),
+                response.optString("emobno"),
+                response.optString("email"),
+                response.optString("location"),
+                response.optString("ctitle"),
+                response.optString("profile_summary"),
+                response.optString("profile_skills"),
+                response.optString("cname"),
+                response.optString("cduration"),
+                response.optString("cresponsibilities"),
+                response.optString("cachievements"),
+                response.optString("clogo")
+            )
+        )
+
 
     }
 
